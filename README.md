@@ -1,22 +1,18 @@
+How to run?
 STEPS:
 Clone the repository
 
 git clonehttps://github.com/entbappy/Build-a-Complete-Medical-Chatbot-with-LLMs-LangChain-Pinecone-Flask-AWS.git
-
-## STEP 01- Create a conda environment after opening the repository
-
+STEP 01- Create a conda environment after opening the repository
 conda create -n medibot python=3.10 -y
 conda activate medibot
-## STEP 02- install the requirements
-
+STEP 02- install the requirements
 pip install -r requirements.txt
 Create a .env file in the root directory and add your Pinecone & openai credentials as follows:
 PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
 # run the following command to store embeddings to pinecone
 python store_index.py
-
 # Finally run the following command
 python app.py
 Now,
@@ -28,20 +24,17 @@ LangChain
 Flask
 GPT
 Pinecone
-
-### AWS-CICD-Deployment-with-Github-Actions
-
+AWS-CICD-Deployment-with-Github-Actions
 1. Login to AWS console.
 2. Create IAM user for deployment
-
-## with specific access
+#with specific access
 
 1. EC2 access : It is virtual machine
 
 2. ECR: Elastic Container registry to save your docker image in aws
 
 
-## Description: About the deployment
+#Description: About the deployment
 
 1. Build docker image of the source code
 
@@ -53,7 +46,7 @@ Pinecone
 
 5. Lauch your docker image in EC2
 
-## Policy:
+#Policy:
 
 1. AmazonEC2ContainerRegistryFullAccess
 
@@ -62,7 +55,6 @@ Pinecone
 - Save the URI: 315865595366.dkr.ecr.us-east-1.amazonaws.com/medicalbot
 4. Create EC2 machine (Ubuntu)
 5. Open EC2 and Install docker in EC2 Machine:
-
 #optinal
 
 sudo apt-get update -y
